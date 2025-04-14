@@ -21,5 +21,5 @@ Note that the CCO is in development and no standard has been agreed yet.
 * For Python kernels, the `import` command could be overloaded to store explicit imports and their version;
 * For each imported package, fetch the CITATION.cff from the source repo and create a citation;
 * Inspect the compute environment to get a detailed listing of installed packages;
-  
+* Use [Myst citation logic](https://mystmd.org/guide/citations) in notebooks (see this [PR](https://github.com/jupyter-book/jupyterlab-myst/pull/161)). Authors would simply have to cite papers and datasets to create a bibliography, which I imagine could also be exported as a CCO. 
 
