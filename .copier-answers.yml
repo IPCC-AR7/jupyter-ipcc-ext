@@ -1,0 +1,15 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v4.3.8
+_src_path: https://github.com/jupyterlab/extension-template
+author_email: huard.david@ouranos.ca
+author_name: David Huard
+has_binder: true
+has_settings: true
+kind: frontend
+labextension_name: provenance
+project_short_description: A JupyterLab extension to record provenance and credit
+    information.
+python_name: jupyter-ext-provenance
+repository: https://github.com/IPCC-AR7/jupyter-ipcc-ext
+test: true
+
