@@ -1,0 +1,49 @@
+{
+  "type": "object",
+  "title": "Metadata Form example",
+  "description": "Settings of the metadata form extension.",
+  "jupyter.lab.metadataforms": [
+    {
+      "id": "@jupyterlab-examples/metadata-form:advanced",
+      "label": "Credit information",
+      "metadataSchema": {
+        "type": "object",
+        "properties": {
+          "/my-extension/software": {
+            "title": "Software libraries",
+            "description": "Cite the software libraries used in the notebook",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "/my-extension/data": {
+            "title": "Data used",
+            "description": "Cite the data used in the notebooks",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "uiSchema": {
+        "ui:order": [
+          "/my-extension/data",
+          "/my-extension/software"
+        ]
+      },
+      "metadataOptions": {
+        "/my-extension/software": {
+          "customRenderer": "@jupyterlab-examples/metadata-form:advanced.software",
+          "metadataLevel": "notebook"
+        },
+        "/my-extension/data": {
+          "customRenderer": "@jupyterlab-examples/metadata-form:advanced.data",
+          "metadataLevel": "notebook"
+        }
+      }
+    }
+  ],
+  "additionalProperties": false
+}
