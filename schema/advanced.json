@@ -4,12 +4,12 @@
   "description": "Settings of the metadata form extension.",
   "jupyter.lab.metadataforms": [
     {
-      "id": "@jupyterlab-examples/metadata-form:advanced",
+      "id": "@jupyterlab-examples/jupyter-ext-provenance:advanced",
       "label": "Credit information",
       "metadataSchema": {
         "type": "object",
         "properties": {
-          "/my-extension/software": {
+          "/credit/software": {
             "title": "Software libraries",
             "description": "Cite the software libraries used in the notebook",
             "type": "array",
@@ -17,7 +17,7 @@
               "type": "string"
             }
           },
-          "/my-extension/data": {
+          "/credit/data": {
             "title": "Data used",
             "description": "Cite the data used in the notebooks",
             "type": "array",
@@ -29,17 +29,17 @@
       },
       "uiSchema": {
         "ui:order": [
-          "/my-extension/data",
-          "/my-extension/software"
+          "/credit/data",
+          "/credit/software"
         ]
       },
       "metadataOptions": {
-        "/my-extension/software": {
-          "customRenderer": "@jupyterlab-examples/metadata-form:advanced.software",
+        "/credit/software": {
+          "customRenderer": "@jupyterlab-examples/jupyter-ext-provenance:advanced.software",
           "metadataLevel": "notebook"
         },
-        "/my-extension/data": {
-          "customRenderer": "@jupyterlab-examples/metadata-form:advanced.data",
+        "/credit/data": {
+          "customRenderer": "@jupyterlab-examples/jupyter-ext-provenance:advanced.data",
           "metadataLevel": "notebook"
         }
       }

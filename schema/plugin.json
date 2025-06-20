@@ -1,6 +1,6 @@
 {
   "jupyter.lab.shortcuts": [],
-  "title": "provenance",
+  "title": "jupyter-ext-provenance",
   "description": "provenance settings.",
   "type": "object",
   "properties": {},
