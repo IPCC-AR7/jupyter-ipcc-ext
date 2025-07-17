@@ -3,10 +3,10 @@ requires = ["hatchling>=1.5.0", "jupyterlab>=4.0.0,<5", "hatch-nodejs-version>=0
 build-backend = "hatchling.build"
 
 [project]
-name = "jupyter-ext-provenance"
+name = "jupyterlab_examples_metadata_form"
 readme = "README.md"
-license = { file = "LICENSE" }
-requires-python = ">=3.9"
+license = {text = "BSD-3-Clause License"}
+requires-python = ">=3.8"
 classifiers = [
     "Framework :: Jupyter",
     "Framework :: Jupyter :: JupyterLab",
@@ -16,11 +16,11 @@ classifiers = [
     "License :: OSI Approved :: BSD License",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
-    "Programming Language :: Python :: 3.13",
 ]
 dependencies = [
 ]
@@ -30,27 +30,27 @@ dynamic = ["version", "description", "authors", "urls", "keywords"]
 source = "nodejs"
 
 [tool.hatch.metadata.hooks.nodejs]
-fields = ["description", "authors", "urls", "keywords"]
+fields = ["description", "authors", "urls"]
 
 [tool.hatch.build.targets.sdist]
-artifacts = ["jupyter-ext-provenance/labextension"]
+artifacts = ["jupyterlab_examples_metadata_form/labextension"]
 exclude = [".github", "binder"]
 
 [tool.hatch.build.targets.wheel.shared-data]
-"jupyter-ext-provenance/labextension" = "share/jupyter/labextensions/jupyter-ext-provenance"
-"install.json" = "share/jupyter/labextensions/jupyter-ext-provenance/install.json"
+"jupyterlab_examples_metadata_form/labextension" = "share/jupyter/labextensions/@jupyterlab-examples/metadata-form"
+"install.json" = "share/jupyter/labextensions/@jupyterlab-examples/metadata-form/install.json"
 
 [tool.hatch.build.hooks.version]
-path = "jupyter-ext-provenance/_version.py"
+path = "jupyterlab_examples_metadata_form/_version.py"
 
 [tool.hatch.build.hooks.jupyter-builder]
 dependencies = ["hatch-jupyter-builder>=0.5"]
 build-function = "hatch_jupyter_builder.npm_builder"
 ensured-targets = [
-    "jupyter-ext-provenance/labextension/static/style.js",
-    "jupyter-ext-provenance/labextension/package.json",
+    "jupyterlab_examples_metadata_form/labextension/static/style.js",
+    "jupyterlab_examples_metadata_form/labextension/package.json",
 ]
-skip-if-exists = ["jupyter-ext-provenance/labextension/static/style.js"]
+skip-if-exists = ["jupyterlab_examples_metadata_form/labextension/static/style.js"]
 
 [tool.hatch.build.hooks.jupyter-builder.build-kwargs]
 build_cmd = "build:prod"
@@ -60,7 +60,7 @@ npm = ["jlpm"]
 build_cmd = "install:extension"
 npm = ["jlpm"]
 source_dir = "src"
-build_dir = "jupyter-ext-provenance/labextension"
+build_dir = "jupyterlab_examples_metadata_form/labextension"
 
 [tool.jupyter-releaser.options]
 version_cmd = "hatch version"

@@ -4,7 +4,7 @@
   "description": "Settings of the metadata form extension.",
   "jupyter.lab.metadataforms": [
     {
-      "id": "@jupyterlab-examples/jupyter-ext-provenance:advanced",
+      "id": "@jupyterlab-examples/metadata-form:advanced",
       "label": "Credit information",
       "metadataSchema": {
         "type": "object",
@@ -35,11 +35,11 @@
       },
       "metadataOptions": {
         "/credit/software": {
-          "customRenderer": "@jupyterlab-examples/jupyter-ext-provenance:advanced.software",
+          "customRenderer": "@jupyterlab-examples/metadata-form:advanced.software",
           "metadataLevel": "notebook"
         },
         "/credit/data": {
-          "customRenderer": "@jupyterlab-examples/jupyter-ext-provenance:advanced.data",
+          "customRenderer": "@jupyterlab-examples/metadata-form:advanced.data",
           "metadataLevel": "notebook"
         }
       }

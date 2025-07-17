@@ -1,7 +1,7 @@
 {
-  "name": "provenance-ui-tests",
+  "name": "@jupyterlab-examples/metadata-form-ui-tests",
   "version": "1.0.0",
-  "description": "JupyterLab provenance Integration Tests",
+  "description": "JupyterLab @jupyterlab-examples/metadata-form Integration Tests",
   "private": true,
   "scripts": {
     "start": "jupyter lab --config jupyter_server_test_config.py",
